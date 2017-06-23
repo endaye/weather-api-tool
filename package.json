@@ -1,0 +1,28 @@
+{
+  "name": "weather-api-tool",
+  "version": "0.1.0",
+  "description": "a centaurstech weather api query tool",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/yiwangcentaurs/weather-api-tool.git"
+  },
+  "keywords": [
+    "weather",
+    "location"
+  ],
+  "author": "Yuancheng Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/yiwangcentaurs/weather-api-tool/issues"
+  },
+  "homepage": "https://gitlab.com/yiwangcentaurs/weather-api-tool",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2"
+  }
+}
