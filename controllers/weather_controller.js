@@ -14,9 +14,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-
-var weather = require('./parser_open_weather_map.js');
-
 exports.index = function (req, res) {
     res.render("index.pug", { layout: false });
 };
@@ -24,12 +21,11 @@ exports.index = function (req, res) {
 // https://openweathermap.org/current
 exports.open_weather_map_current = function (req, res) {
     var user_city = req.body.city.toLowerCase().replace(/\s+/g, '');
-    var city_list, city_ids, res_weather, own, i;
+    var city_list, city_ids, own, i;
 
     owm = require('./parser_open_weather_map.js')
     city_list = require('../models/owm_city_list.json');
     city_ids = [];
-    res_weather = [];
 
     for (i = 0; i < city_list.length; ++i) {
         var city = city_list[i];
@@ -56,6 +52,25 @@ exports.open_weather_map_current = function (req, res) {
     })
 };
 
+// https://openweathermap.org/current
+exports.seniverse_current = function (req, res) {
+    var user_city = req.body.city.toLowerCase().replace(/\s+/g, '');
+    var seniverse, i;
+
+    seniverse = require('./parser_seniverse.js')
+
+    options = seniverse.package_request_current(user_city);
+
+    // Start the request
+    request(options, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            var weather = seniverse.parser_current(body);
+            res.send(weather);
+        } else if (error) {
+            console.log(error);
+        }
+    })
+};
 
 
 
