@@ -9,6 +9,7 @@ a Centaurstech weather api query tool
 4. finnaly, use [Postman](https://www.getpostman.com/) to send some requests to `http://localhost:3402/api/weather/....`
 
 ## API Reference
+
 1. OpenWeatherMap: `https://openweathermap.org/api`
 
 ## Data Format Example
@@ -18,6 +19,7 @@ a Centaurstech weather api query tool
 + **Port:** 3042
 
 + **API URL:** 
+
 ..1. OpenWeatherMap current: `/api/weather/openweathermap/current`
 
 + **Method:** POST, JSON
