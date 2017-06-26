@@ -10,7 +10,8 @@ a Centaurstech weather api query tool
 
 ## API Reference
 
-1. OpenWeatherMap: `https://openweathermap.org/api`
+1. **OpenWeatherMap**: [`https://openweathermap.org`](https://openweathermap.org/api)
+2. **心知天气**: [`https://www.seniverse.com`](https://www.seniverse.com/doc)
 
 ## Data Format Example
 
@@ -18,11 +19,11 @@ a Centaurstech weather api query tool
 
 + **Port:** 3042
 
-+ **API URL:** 
-
-..1. OpenWeatherMap current: `/api/weather/openweathermap/current`
-
 + **Method:** POST, JSON
+
++ **API URL:** 
+  1. **OpenWeatherMap** current: `/api/weather/openweathermap/current`
+  2. **心知天气** current: `/api/weather/seniverse/current`
 
 ### Request
 ```json
