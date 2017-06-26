@@ -22,8 +22,8 @@ a Centaurstech weather api query tool
 + **Method:** POST, JSON
 
 + **API URL:** 
-  1. **OpenWeatherMap** current: `/api/weather/openweathermap/current`
-  2. **心知天气** current: `/api/weather/seniverse/current`
+  1. **OpenWeatherMap**: `/api/weather/openweathermap/current`
+  2. **心知天气**: `/api/weather/seniverse/current`
 
 ### Request
 ```json
