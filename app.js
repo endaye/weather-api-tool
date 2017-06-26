@@ -13,10 +13,10 @@ app.set('port', port);
 
 var weather = require('./controllers/weather_controller.js')
 
-app.get('/',  weather.index);
+app.get('/', weather.index);
 
 app.post('/api/weather/openweathermap/current', weather.open_weather_map_current);
 
-app.listen(app.get('port'), function() {
+app.listen(app.get('port'), function () {
     console.log('Server started at ' + port);
 });

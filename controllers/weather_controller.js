@@ -56,17 +56,6 @@ exports.open_weather_map_current = function (req, res) {
     })
 };
 
-/*
-{
-    "id": 707860,
-    "name": "Hurzuf",
-    "country": "UA",
-    "coord": {
-      "lon": 34.283333,
-      "lat": 44.549999
-    }
-  },
- */
 
 
 
