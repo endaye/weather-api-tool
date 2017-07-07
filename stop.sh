@@ -1,1 +1,1 @@
-forever stop flight-server
+forever stop weather-server
