@@ -69,16 +69,18 @@ exports.seniverse_current = function (req, res) {
         } else if (error) {
             console.log(error);
              var weather={}
-            weather.status = 520  // unknown error
+             // unknown error
+             weather.status(520) 
+             res.send(weather)
         }
         else if (response.statusCode == 404){
-            var weather={}
-            weather.status = 404
-            res.send(weather)
+            var weather=seniverse.parser_current(body)
+             weather.status(404)
+             res.send(weather)
         }
         else if(response.statusCode == 403){
-            var weather={}
-            weather.status = 403
+            var weather=seniverse.parser_current(body)
+            res.status(403)
             res.send(weather)
         }
        
