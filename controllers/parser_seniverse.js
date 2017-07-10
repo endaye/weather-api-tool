@@ -23,8 +23,14 @@ exports.package_request_current = function (city) {
 
 exports.parser_current = function (body) {
     var raw_data = JSON.parse(body);
+     var weather = {}
+   // 
+    if(!raw_data.results)
+    {
+        return weather
+    }
     console.log(raw_data.results);
-    var weather = {}
+   
     weather.city = raw_data.results[0].location.name;
     weather.country = raw_data.results[0].location.country;
     weather.main = raw_data.results[0].now.text;
@@ -33,5 +39,6 @@ exports.parser_current = function (body) {
     weather.humidity = '';
     weather.wind = '';
     weather.visibility = '';
+    weather.status = 200
     return weather
 }
