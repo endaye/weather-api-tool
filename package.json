@@ -14,7 +14,14 @@
     "weather",
     "location"
   ],
-  "author": "Yuancheng Zhang",
+    "author": {
+    "name": "Centaurs Technologies Co.",
+    "email": "contanct@centaurstech.com ",
+    "url": "https://www.centaurstech.com/"
+  },
+  "contributors": [
+    "Yuancheng Zhang"
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/yiwangcentaurs/weather-api-tool/issues"
