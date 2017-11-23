@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-var port = process.env.PORT || 3402;
+var port = 3402;
 app.set('port', port);
 
 var weather = require('./controllers/weather_controller.js')

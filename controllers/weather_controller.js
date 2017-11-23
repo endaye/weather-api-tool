@@ -54,7 +54,8 @@ exports.open_weather_map_current = function (req, res) {
 
 // https://openweathermap.org/current
 exports.seniverse_current = function (req, res) {
-    var user_city = req.body.city.toLowerCase().replace(/\s+/g, '');
+    var user_city = encodeURI(req.body.city) 
+    // toLowerCase().replace(/\s+/g, '');
     var seniverse, i;
 
     seniverse = require('./parser_seniverse.js')
