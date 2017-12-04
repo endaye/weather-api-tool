@@ -29,6 +29,7 @@
   "homepage": "https://gitlab.com/yiwangcentaurs/weather-api-tool",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "centaurs-test-plugin": "git+https://github.com/yiwangcentaurs/centaurs-test-plugin.git",    
     "express": "^4.15.3",
     "pug": "^2.0.0-rc.2",
     "request": "^2.81.0"
