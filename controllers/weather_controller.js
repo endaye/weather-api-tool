@@ -14,12 +14,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-exports.index = function (req, res) {
+exports.index = function (req, res, next) {
     res.render("index.pug", { layout: false });
+    if (next) {
+        next();
+    }
 };
 
 // https://openweathermap.org/current
-exports.open_weather_map_current = function (req, res) {
+exports.open_weather_map_current = function (req, res, next) {
     var user_city = req.body.city.toLowerCase().replace(/\s+/g, '');
     var city_list, city_ids, own, i;
 
@@ -50,10 +53,14 @@ exports.open_weather_map_current = function (req, res) {
             console.log(error);
         }
     })
+
+    if (next) {
+        next();
+    }
 };
 
 // https://openweathermap.org/current
-exports.seniverse_current = function (req, res) {
+exports.seniverse_current = function (req, res, next) {
     var user_city = req.body.city.toLowerCase().replace(/\s+/g, '');
     var seniverse, i;
 
@@ -70,6 +77,10 @@ exports.seniverse_current = function (req, res) {
             console.log(error);
         }
     })
+
+    if (next) {
+        next();
+    }
 };
 
 

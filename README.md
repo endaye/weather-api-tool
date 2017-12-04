@@ -17,7 +17,7 @@ a Centaurstech weather api query tool
 
 ### Info
 
-+ **Port:** 3042
++ **Port:** 9016
 
 + **Method:** POST, JSON
 
